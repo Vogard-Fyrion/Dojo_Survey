@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" 
+    type="text/css" 
+    href="{{ url_for('static', filename ='style.css') }}">
+</head>
+<body>
+    <div class="main">
+        <form class="form" action="/process" method="post">
+            <h1 class="mb">Dojo Survey</h1>
+            <label class="mb" for="name">Your Name:</label>
+            <input class="mb" type="text" name="name">
+            <label class="mb" for="city">Your City:</label>
+            <input class="mb" type="text" name="location">
+            <label class="mb" for="language">Favorite Language:</label>
+            <select class="mb" name="language">
+                <option>Python</option>
+                <option>HTML</option>
+                <option>CSS</option>
+                <option>JavaScript</option>
+            </select>
+            <textarea class="mb" name="comment"cols="30" rows="10"></textarea>
+            <button>Submit</button>
+        </form>
+    </div>
+</body>
+</html>

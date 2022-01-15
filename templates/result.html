@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" 
+    type="text/css" 
+    href="{{ url_for('static', filename ='style.css') }}">
+</head>
+<body class="main pad">
+    <div class="width pad results">
+        <h1>Submitted Info</h1>
+        <div class="flex pad">
+            <div class="col2 flex fc">
+                <label class="mb">Name:</label>
+                <label class="mb">Location:</label>
+                <label class="mb">Favorite Language:</label>
+                <label class="mb">Comment:</label>
+            </div>
+            <div class="col">
+                <p class="mb">{{session['name']}}</p>
+                <p class="mb">{{session['location']}}</p>
+                <p class="mb">{{session['language']}}</p>
+                <p class="mb">{{session['comment']}}</p>
+            </div>
+        </div>
+        <form action="/return">
+            <button class="btn" type="submit">Go Back</button>
+        </form>
+    </div>
+</body>
+</html>
